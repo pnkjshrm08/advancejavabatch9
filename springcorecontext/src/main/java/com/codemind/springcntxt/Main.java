@@ -10,9 +10,26 @@ public class Main {
 		
 		ApplicationContext cntxt = new ClassPathXmlApplicationContext("Beans.xml");
 		
-		Employee emp = cntxt.getBean(Employee.class);
+		//Employee emp = cntxt.getBean(Employee.class);
 		
-		System.out.println(emp);
+		Employee emp1 = (Employee) cntxt.getBean("rohit");
+		Employee emp2 = (Employee) cntxt.getBean("rohit");
+		
+	   
+		/** Scopes of the Bean
+		 *   1. Prototype
+		 *   2. Singleton
+		 *   
+		 */
+		
+		/**
+		 * Auto wiring  
+		 * 
+		 * 
+		 */
+		
+			
+		System.out.println(emp1);
 		
 		
 	}
